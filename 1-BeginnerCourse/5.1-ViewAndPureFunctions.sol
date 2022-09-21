@@ -24,8 +24,8 @@ contract ViewAndPure {
     updates the state variable x with the
     sum of the parameter and the state variable x.
     */
-       function addToX2(uint y) public {
-         x = x + y;
+    function addToX2(uint y) public {
+        x = x + y;
     }
 
 }
