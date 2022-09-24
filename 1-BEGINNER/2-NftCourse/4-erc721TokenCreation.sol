@@ -20,7 +20,7 @@ contract MyToken is ERC721, Ownable {
     }
 }
 // implementation of a ERC721 contract.
-// implementhttps://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol
+// implement https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol
 
 /*  Assignment
 

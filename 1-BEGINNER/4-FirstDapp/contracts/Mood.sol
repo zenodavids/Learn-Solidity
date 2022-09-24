@@ -1,6 +1,6 @@
 /*Specify the solidity version and add a license*/
 // SPDX-License-Identifier: MIT
- pragma solidity ^0.8.1;
+pragma solidity ^0.8.1;
 
 /*Define the contract*/
 contract MoodDiary{
@@ -16,4 +16,4 @@ contract MoodDiary{
     function getMood() public view returns(string memory){
         return mood;
     }
- }
+}
