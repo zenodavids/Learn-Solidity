@@ -90,6 +90,6 @@ The amount by which the base fees gets adjusted is dependent on how far the bloc
 
 # Better Gas Estimation
 
-On average, the network achieves equilibrium around 15M gas by modifying the block size and base fees.
-
-If the block gas is greater than the 15M target, the base fees for the next block is increased. Similarly, if the block gas is smaller than the 15M target, the base fees for the next block is decreased. The amount by which the base fees gets adjusted is dependent on how far the block gas was from the 15M target.
+The minimum is the current base fees x 87.5%,
+and the maximum is the current base fees x 112.5%.
+The user can then just adjust the tip, which is usually a fraction of the base fees, for the miner.
