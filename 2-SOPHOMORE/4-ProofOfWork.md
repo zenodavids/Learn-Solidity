@@ -70,11 +70,12 @@ _You can wait longer for even greater assurances._
 The _Ethereum proof-of-work protocol, Ethash,_ requires miners to go through an intense race of trial and error.
 The process goes as follows:
 
-_1_/The miner selects a group of transactions to include in a potential block.
-Based on the block they create, the network has rules to choose a slice of data (roughly ~1GB in size) from the current state of the blockchain network. These rules are not particularly relevant, but you can read more about them in the Ethash docs.
-They put the dataset through a hashing function to calculate a target value. This target is a number, which is inversely proportionate to the mining difficulty. The higher the mining difficulty, the lower the target, and vice versa.
-Then, the miner uses brute force to try to find another random number called the nonce.
-Putting the combination of the dataset, target, nonce, and a couple other values through a hashing function should result in a number that is lower than the target.
-HashFunction(dataset, target, nonce, ...) = a number
-The higher the mining difficulty, the lower the target, and hence the harder it is to find a nonce which satisfies this condition.
-Miners keep using trial-and-error to find a valid value for the nonce which satisfies the condition. There is no formula to calculate the nonce.
+- The miner selects a group of transactions to include in a potential block.
+- Based on the block they create, the network has rules to choose a slice of data (roughly ~1GB in size) from the current state of the blockchain network.
+- They put the dataset through a hashing function to calculate a target value. This target is a number, which is inversely proportionate to the mining difficulty.
+  The higher the mining difficulty, the lower the target, and vice versa.
+- Then, the miner uses brute force to try to find another random number called the nonce.
+- Putting the combination of the dataset, target, nonce, and a couple other values through a hashing function should result in a number that is lower than the target.
+- HashFunction(dataset, target, nonce, ...) = a number
+  The higher the mining difficulty, the lower the target, and hence the harder it is to find a nonce which satisfies this condition.
+- Miners keep using trial-and-error to find a valid value for the nonce which satisfies the condition. There is no formula to calculate the nonce.
