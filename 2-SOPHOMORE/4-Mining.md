@@ -23,19 +23,19 @@ _Anyone, though not everyone can mine Ethereum profitably._
 
 # How are Ethereum transactions mined?
 
-_1._ A user signs a transaction request from their account.
-_2._ The transaction is broadcasted to the Ethereum network through a node.
-_3._ Upon hearing of the new transaction, each node in the network adds the transaction to their local mempool (memory pool).
-The mempool is a list of transactions that nodes have heard about but have not yet been included as part of a block.
-_4._ At some point, a miner groups a lot of transactions into a potential block, in a way that maximizes transaction fees they earn while staying under the block gas limits. Then,
-_4a._ The miner verifies the validity of each transaction. This involves things like checking that no one is trying to transfer ether they don't own, or that the signature is invalid, or the request is malformed, etc.
-_4b._ The miner then executes the transaction on their local copy of the Ethereum Virtual Machine (EVM). It awards the transaction fees for each such request to their own account.
-_4c._ The miner begins the process of creating the Proof-of-Work certificate of legitimacy for the entire block, after all transactions in the block have been verified and executed on their local EVM.
-_5._ Eventually, the miner finishes producing the certificate of legitimacy for the block, which includes the user's transaction. The miner then broadcasts the completed block to the world, which includes the certificate and the new state information for the blockchain.
-_6._ Other nodes hear about the new block. They verify the certificate (which is easy to do), execute all transactions in the block on their local copies of the EVM, and verify that their EVM state matches the one proposed by the miner.
-_7._ Once other nodes have verified everything proposed by the miner, they add this block to their blockchain node, and accept the new EVM state as "the current state of the blockchain".
-_8._ Each node removes the transactions included within the block from their local mempool.
-_9._ This process repeats.
+- A user signs a transaction request from their account.
+- The transaction is broadcasted to the Ethereum network through a node.
+- Upon hearing of the new transaction, each node in the network adds the transaction to their local mempool (memory pool).
+  The mempool is a list of transactions that nodes have heard about but have not yet been included as part of a block.
+- At some point, a miner groups a lot of transactions into a potential block, in a way that maximizes transaction fees they earn while staying under the block gas limits. Then,
+  - The miner verifies the validity of each transaction. This involves things like checking that no one is trying to transfer ether they don't own, or that the signature is invalid, or the request is malformed, etc.
+  - The miner then executes the transaction on their local copy of the Ethereum Virtual Machine (EVM). It awards the transaction fees for each such request to their own account.
+  - The miner begins the process of creating the Proof-of-Work certificate of legitimacy for the entire block, after all transactions in the block have been verified and executed on their local EVM.
+- Eventually, the miner finishes producing the certificate of legitimacy for the block, which includes the user's transaction. The miner then broadcasts the completed block to the world, which includes the certificate and the new state information for the blockchain.
+- Other nodes hear about the new block. They verify the certificate (which is easy to do), execute all transactions in the block on their local copies of the EVM, and verify that their EVM state matches the one proposed by the miner.
+- Once other nodes have verified everything proposed by the miner, they add this block to their blockchain node, and accept the new EVM state as "the current state of the blockchain".
+- Each node removes the transactions included within the block from their local mempool.
+- This process repeats.
 
 # Methods of Mining
 
